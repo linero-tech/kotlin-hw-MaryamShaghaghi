@@ -5,7 +5,7 @@ fun task3(): String {
     return """
         INPUT height of triangle
         INPUT base triangle
-        Calculate area = 0.5 * base * height
+        Calculate area = base * height * 0.5
         OUTPUT area of triangle
     """
 }

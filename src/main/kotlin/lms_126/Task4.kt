@@ -2,5 +2,12 @@ package lms_126
 
 fun task4(): String {
 
-    return TODO("Replace this 'TODO' with your solution")
+    return """
+        INPUT number X
+        INPUT number Y
+        IF X > Y
+        OUTPUT number X
+        ELSE
+        OUTPUT number Y
+    """.trimIndent()
 }
