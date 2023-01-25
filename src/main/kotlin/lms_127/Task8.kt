@@ -1,6 +1,10 @@
 package lms_127
 
 fun task8(sentence: String, character: Char): Int {
-
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val result = sentence.count {it == character }
+    return result
+}
+fun main() {
+    val answer = task8("I code in KOTLIN",'I' )
+    println(answer)
 }
