@@ -5,6 +5,6 @@ fun task9(sentence: String, character: Char): Boolean {
     return result
 }
 fun main() {
-    val answer = task9("I code In KOTLIN", 'i')
+    val answer = task9("I code In KOTLIN", 'I')
     println(answer)
 }
