@@ -1,16 +1,20 @@
 package lms_129
 
-fun task2(number: Int): Boolean {
-    var primeNumber = true
-    for (i in 2..number / 2) {
-    if (number % i == 0){
-    primeNumber = false
-    break
+fun task2(number: Int): Boolean
+{
+    var result = true
+    for (i in 2..number / 2)
+    {
+        if (number % i == 0)
+        {
+            result = false
+            break
+        }
     }
-    }
-    return primeNumber
+
+    return result
 }
 fun main() {
-    val answer = task2(11)
+    val answer = task2(5)
     println(answer)
 }
