@@ -2,7 +2,7 @@ package lms_129
 
 fun task2(number: Int): Boolean
 {
-    if (number == 1)
+    if (number == 0 || number == 1)
     {
         return false
     }
