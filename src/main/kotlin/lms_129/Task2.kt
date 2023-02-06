@@ -15,6 +15,6 @@ fun task2(number: Int): Boolean
     return result
 }
 fun main() {
-    val answer = task2(5)
+    val answer = task2(1)
     println(answer)
 }
