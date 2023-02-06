@@ -8,18 +8,23 @@ fun task9(temperature: String): String
 
     return if (unit == 'f' || unit == 'F')
     {
-        val otherUnit = (temp - 32) * 0.5556
-        val final = otherUnit.toInt()
-        "$final C"
+        val convert = (temp - 32) * 0.5556
+        val convert2 = convert.toInt()
+        val convert3 = "$convert2 C"
+        val result = convert3.replace("\\s".toRegex(),"")
+        result
+
     } else {
-        val otherUnit = 1.8 * temp + 32
-        val final = otherUnit.toInt()
-        "$final F"
+        val convert = 1.8 * temp + 32
+        val convert2 = convert.toInt()
+        val convert3 = "$convert2 F"
+        val result = convert3.replace("\\s".toRegex(),"")
+        result
     }
 
 }
 fun main ()
 {
-    val answer = task9("-22F")
+    val answer = task9("50f")
     println(answer)
 }
