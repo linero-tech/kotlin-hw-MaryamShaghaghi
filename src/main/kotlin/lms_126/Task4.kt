@@ -7,7 +7,9 @@ fun task4(): String {
         INPUT number Y
         IF X > Y
         OUTPUT number X
-        ELSE
+        ELSE IF number Y > X
         OUTPUT number Y
+        ELSE
+        OUTPUT "X is equal to Y"
     """.trimIndent()
 }

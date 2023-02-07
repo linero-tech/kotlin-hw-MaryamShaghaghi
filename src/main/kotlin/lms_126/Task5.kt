@@ -18,7 +18,5 @@ fun task5(): String {
         OUTPUT "Saturday"
         IF number is 7
         OUTPUT "Sunday"
-        IF number is 8
-        OUTPUT "Choose number between 1 to 7"
     """.trimIndent()
 }
