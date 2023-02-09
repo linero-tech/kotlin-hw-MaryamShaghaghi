@@ -1,12 +1,18 @@
 package lms_127
 
-fun task3(radius: Double): Double {
+
+import java.text.DecimalFormat
+
+fun task3(radius: Double): Double
+{
     val pi = 3.1416
-    val result = 2 * pi * radius;
-    return result
+    val perimeterOfCircle = 2 * pi * radius
+    val df = DecimalFormat("#.##")
+    val result = df.format(perimeterOfCircle)
+    return result.toDouble()
 
 }
 fun main() {
-   val answer = task3(2.0);
+   val answer = task3(2.0)
     println(answer)
 }
