@@ -5,8 +5,8 @@ fun task5(valueForA: Int, valueForB: Int): Pair<Int, Int> {
     var a = valueForA
     var b = valueForB
 
-    a = a - b
-    b = a + b
+    a -= b
+    b += a
     a = b - a
 
     // Do not erase or change this statement

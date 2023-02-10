@@ -1,8 +1,8 @@
 package lms_127
 
-fun task4(base: Double, height: Double): Double {
-    val result = 0.5 * base * height;
-    return result
+fun task4(base: Double, height: Double): Double
+{
+    return 0.5 * base * height
 
 }
 fun main() {
