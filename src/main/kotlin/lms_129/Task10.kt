@@ -37,6 +37,6 @@ fun task10(password: String): Boolean
 
 fun main()
 	{
-		val answer = task10("&0hnhG")
+		val answer = task10("&0hnhGG")
 		println(answer)
 	}
