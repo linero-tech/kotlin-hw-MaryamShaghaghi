@@ -2,5 +2,28 @@ package lms_130
 
 fun task2(items: List<Int>): Int {
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+
+
+    var result = 0
+    return if (items.isEmpty())
+    {
+        0
+    }
+    else
+    {
+
+        items.forEachIndexed { index, number ->
+            if (index % 2 == 0)
+            {
+                result += number
+            }
+        }
+        return result
+    }
 }
+fun main()
+{
+    val result = task2(listOf(1, 2, 3, 4))
+    println(result)
+}
+
