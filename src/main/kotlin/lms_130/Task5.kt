@@ -2,5 +2,16 @@ package lms_130
 
 fun task5(items: List<Int>): List<Int> {
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val multiplyByIndex = mutableListOf<Int>()
+
+    items.forEachIndexed { index, number ->
+        multiplyByIndex.add(index*number)
+    }
+
+    return multiplyByIndex
+}
+fun main()
+{
+    val result = task5(listOf(1, 5, 11))
+    println(result)
 }
