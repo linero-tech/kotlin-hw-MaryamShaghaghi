@@ -1,6 +1,24 @@
 package lms_130
 
-fun task6(sentence: String): String {
+fun task6(sentence: String): String
+{
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    var upperCase = ""
+
+    sentence.forEachIndexed { index, character ->
+        upperCase += if (index % 2 == 0)
+        {
+            character.uppercaseChar()
+        }
+        else
+        {
+            character
+        }
+    }
+    return upperCase
+}
+fun main()
+{
+    val result = task6("I like Gothenburg")
+    println(result)
 }
