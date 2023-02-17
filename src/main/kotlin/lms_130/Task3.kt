@@ -1,6 +1,26 @@
 package lms_130
 
-fun task3(items: List<Int>): List<Int> {
+fun task3(items: List<Int>): List<Int>
+{
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val uniqueNumber = mutableListOf<Int>()
+    val repeatedNumber = mutableSetOf<Int>()
+
+    items.forEach { number ->
+        if (number in uniqueNumber)
+        {
+            repeatedNumber.add(number)
+        }
+        else
+        {
+            uniqueNumber.add(number)
+        }
+    }
+
+    return repeatedNumber.toList()
 }
+ fun main()
+ {
+     val result = task3(listOf(1, 1, 1, 2, 2, 3))
+     println(result)
+ }
