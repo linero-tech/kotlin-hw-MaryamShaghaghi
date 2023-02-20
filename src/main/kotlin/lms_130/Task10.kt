@@ -15,7 +15,7 @@ fun task10(items: List<Int>): List<Int>
         }
     }
 
-    return result
+    return result.toList()
 }
 fun main() {
     val answer = task10(listOf(1, 2, 3, 4, 5))
