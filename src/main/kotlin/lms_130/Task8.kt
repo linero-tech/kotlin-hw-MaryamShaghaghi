@@ -3,9 +3,9 @@ package lms_130
 fun task8(items: List<Int>): List<Int>
 {
 	val setItem = items.toMutableSet()
-	var firstHighValue = 0
-	var secondHighValue = 0
-	var thirdHighValue = 0
+	var firstHighValue = Int.MAX_VALUE * -1
+	var secondHighValue = Int.MAX_VALUE * -1
+	var thirdHighValue = Int.MAX_VALUE * -1
 
 	setItem.forEach { num1 ->
 		if (num1 > firstHighValue)
@@ -33,6 +33,6 @@ fun task8(items: List<Int>): List<Int>
 
 fun main()
 {
-	val result = task8(listOf(60, 9, 7, 10))
+	val result = task8(listOf(-60, -9, -7, -10))
 	println(result)
 }
