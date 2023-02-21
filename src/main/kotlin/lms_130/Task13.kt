@@ -2,7 +2,7 @@ package lms_130
 
 fun task13_1(customers: List<String>): List<String> {
 
-    var result = customers.toMutableSet()
+    val result = customers.toMutableSet()
     return result.toList()
 }
 
@@ -21,7 +21,7 @@ fun task13_2(customers: List<String>): List<String> {
             oneTime.add(customer)
         }
     }
-    return multipleTimes.toList()
+    return multipleTimes.toSet().toList()
 }
 
 fun task13_3(customers: List<String>): List<String> {
