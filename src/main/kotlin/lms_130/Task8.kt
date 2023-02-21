@@ -28,11 +28,11 @@ fun task8(items: List<Int>): List<Int>
 		}
 	}
 
-	return listOf(firstHighValue, secondHighValue, thirdHighValue)
+	return listOf(thirdHighValue, secondHighValue, firstHighValue)
 }
 
 fun main()
 {
-	val result = task8(listOf(-60, -9, -7, -10))
+	val result = task8(listOf(60, 9, 7, 10))
 	println(result)
 }
