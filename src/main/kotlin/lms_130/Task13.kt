@@ -2,17 +2,38 @@ package lms_130
 
 fun task13_1(customers: List<String>): List<String> {
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    var result = customers.toMutableSet()
+    return result.toList()
 }
 
 fun task13_2(customers: List<String>): List<String> {
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val multipleTimes = mutableListOf<String>()
+    val oneTime = mutableListOf<String>()
+
+    customers.forEach { customer ->
+        if (customer in oneTime)
+        {
+            multipleTimes.add(customer)
+        }
+        else
+        {
+            oneTime.add(customer)
+        }
+    }
+    return multipleTimes.toList()
 }
 
 fun task13_3(customers: List<String>): List<String> {
 
-    return TODO("Replace this 'TODO' with the variable 'result'. Do not erase the 'return' keyword")
+    val companies = mutableSetOf<String>()
+    customers.forEach { element ->
+        val index1 = element.indexOf("@")
+        val index2 = element.indexOf(".")
+        val company = "${element.subSequence(index1 +1 , index2)}"
+        companies.add(company)
+    }
+    return companies.toList()
 }
 
 fun main() {
