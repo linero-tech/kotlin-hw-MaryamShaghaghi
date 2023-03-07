@@ -1,17 +1,13 @@
 package lms_130
 
-fun task7(items: List<Int>): Int
-{
+fun task7(items: List<Int>): Int {
 
 	var smallestValue = items.first()
-	return if (items.isEmpty())
-	{
+	return if (items.isEmpty()) {
 		0
-	} else
-	{
+	} else {
 		items.forEach { number ->
-			if (number < smallestValue)
-			{
+			if (number < smallestValue) {
 				smallestValue = number
 			}
 		}
@@ -20,8 +16,6 @@ fun task7(items: List<Int>): Int
 
 }
 
-fun main()
-{
-	val result = task7(listOf(10, 5, 11))
-	println(result)
+fun main() {
+	println(task7(listOf(10, 5, 11)))
 }

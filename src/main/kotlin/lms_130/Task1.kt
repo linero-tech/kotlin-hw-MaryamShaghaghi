@@ -1,20 +1,15 @@
 package lms_130
 
-fun task1(items: List<Int>): Int
-{
+fun task1(items: List<Int>): Int {
 
-	return if (items.isEmpty())
-	{
+	return if (items.isEmpty()) {
 		0
-	} else
-	{
+	} else {
 
 		items.random()
 	}
 }
 
-fun main()
-{
-	val result = task1(listOf(1, 2, 3, 4, 5))
-	println(result)
+fun main() {
+	println(task1(listOf(1, 2, 3, 4, 5)))
 }

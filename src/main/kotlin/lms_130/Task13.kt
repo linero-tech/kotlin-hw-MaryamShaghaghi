@@ -1,32 +1,27 @@
 package lms_130
 
-fun task13_1(customers: List<String>): List<String>
-{
+fun task13_1(customers: List<String>): List<String> {
 
 	val result = customers.toMutableSet()
 	return result.toList()
 }
 
-fun task13_2(customers: List<String>): List<String>
-{
+fun task13_2(customers: List<String>): List<String> {
 
 	val multipleTimes = mutableListOf<String>()
 	val oneTime = mutableListOf<String>()
 
 	customers.forEach { customer ->
-		if (customer in oneTime)
-		{
+		if (customer in oneTime) {
 			multipleTimes.add(customer)
-		} else
-		{
+		} else {
 			oneTime.add(customer)
 		}
 	}
 	return multipleTimes.toSet().toList()
 }
 
-fun task13_3(customers: List<String>): List<String>
-{
+fun task13_3(customers: List<String>): List<String> {
 
 	val companies = mutableSetOf<String>()
 	customers.forEach { element ->
@@ -38,8 +33,7 @@ fun task13_3(customers: List<String>): List<String>
 	return companies.toList()
 }
 
-fun main()
-{
+fun main() {
 	val listOfCustomer = listOf(
 		"tgundrey1l@prlog.org",
 		"bgrix1u@apache.org",
