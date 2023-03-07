@@ -1,9 +1,7 @@
 package lms_129
 
-fun task10(password: String): Boolean
-{
-	if (password.length < 6 || password.length > 10)
-	{
+fun task10(password: String): Boolean {
+	if (password.length < 6 || password.length > 10) {
 		return false
 	}
 
@@ -12,31 +10,22 @@ fun task10(password: String): Boolean
 	var hasNumber = false
 	var hasSpecial = false
 
-
-	for (element in password)
-	{
-		if (element.isLowerCase())
-		{
+	for (element in password) {
+		if (element.isLowerCase()) {
 			hasLowerCase = true
-		}
-		else if (element.isUpperCase())
-		{
+		} else if (element.isUpperCase()) {
 			hasUpperCase = true
-		}
-		else if (element.isDigit())
-		{
+		} else if (element.isDigit()) {
 			hasNumber = true
-		}
-		else if (!element.isLetterOrDigit())
-		{
+		} else if (!element.isLetterOrDigit()) {
 			hasSpecial = true
 		}
 	}
-		return hasLowerCase && hasUpperCase && hasNumber && hasSpecial
+	
+	return hasLowerCase && hasUpperCase && hasNumber && hasSpecial
 }
 
-fun main()
-	{
-		val answer = task10("&0hnhGG")
-		println(answer)
-	}
+fun main() {
+	val answer = task10("&0hnhGG")
+	println(answer)
+}

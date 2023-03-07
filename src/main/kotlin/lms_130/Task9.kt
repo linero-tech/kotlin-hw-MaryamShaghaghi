@@ -8,8 +8,7 @@ fun task9(items: List<Int>): List<Int>
 		if (index == 0)
 		{
 			result.add(number * number)
-		}
-		else
+		} else
 		{
 			result.add(number * items[index - 1])
 

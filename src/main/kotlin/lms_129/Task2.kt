@@ -1,27 +1,21 @@
 package lms_129
 
-fun task2(number: Int): Boolean
-{
-    if (number < 2)
-    {
-        return false
-    }
-    else
-    {
+fun task2(number: Int): Boolean {
+    return if (number < 2) {
+        false
+    } else {
         var result = true
-        for (i in 2..number / 2)
-        {
-            if (number % i == 0)
-            {
+        for (i in 2..number / 2) {
+            if (number % i == 0) {
                 result = false
                 break
             }
         }
-        return result
+        result
     }
 
 }
+
 fun main() {
-    val answer = task2(5)
-    println(answer)
+	println(task2(5))
 }

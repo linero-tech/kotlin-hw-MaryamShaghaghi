@@ -1,38 +1,29 @@
 package lms_130
 
-fun task8(items: List<Int>): List<Int>
+fun task8(list: List<Int>): List<Int>
 {
-	val setItem = items.toMutableSet()
-	var firstHighValue = Int.MAX_VALUE * -1
-	var secondHighValue = Int.MAX_VALUE * -1
-	var thirdHighValue = Int.MAX_VALUE * -1
+	// Initialize a hash set to hold the top 3 unique values
+	val topThree = HashSet<Int>()
 
-	setItem.forEach { num1 ->
-		if (num1 > firstHighValue)
+	// Loop through the list of integers
+	for (item in list)
+	{
+		// Add the current item to the set
+		topThree.add(item)
+
+		// Remove any extra elements from the set
+		while (topThree.size > 3)
 		{
-			firstHighValue = num1
-		}
-	}
-	val newItems = setItem.minus(firstHighValue)
-	newItems.forEach { num2 ->
-		if (num2 > secondHighValue)
-		{
-			secondHighValue = num2
-		}
-	}
-	val newItems2 = newItems.minus(secondHighValue)
-	newItems2.forEach { num3 ->
-		if (num3 > thirdHighValue)
-		{
-			thirdHighValue = num3
+			topThree.remove(topThree.minOrNull())
 		}
 	}
 
-	return listOf(thirdHighValue, secondHighValue, firstHighValue)
+	// Convert the set to a sorted list and return it
+	return topThree.toList().sorted()
 }
 
 fun main()
 {
-	val result = task8(listOf(60, 9, 7, 10))
+	val result = task8(listOf(1, 2, 2))
 	println(result)
 }

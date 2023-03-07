@@ -9,7 +9,7 @@ fun task11_1(guests: List<String>): Int
 	return totalGuests
 }
 
-fun task11_2(guests: List<String>, condition: String) : List<String>
+fun task11_2(guests: List<String>, condition: String): List<String>
 {
 	val filterGuests = mutableListOf<String>()
 	guests.forEach { element ->
@@ -20,7 +20,7 @@ fun task11_2(guests: List<String>, condition: String) : List<String>
 			filterGuests.add(element)
 		}
 	}
-      return filterGuests.toList()
+	return filterGuests.toList()
 
 }
 
