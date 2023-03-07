@@ -21,11 +21,10 @@ fun task10(password: String): Boolean {
 			hasSpecial = true
 		}
 	}
-	
+
 	return hasLowerCase && hasUpperCase && hasNumber && hasSpecial
 }
 
 fun main() {
-	val answer = task10("&0hnhGG")
-	println(answer)
+	println(task10("&0hnhGG"))
 }
